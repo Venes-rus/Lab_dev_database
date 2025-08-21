@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="LibraryAppNHibernate" namespace="LibraryAppNHibernate">
+	<class name="Reader" table="Readers">
+		<id name="Id" column="reader_id" type="int">
+			<generator class="sequence">
+				<param name="sequence">readers_reader_id_seq</param>
+			</generator>
+		</id>
+		<property name="FullName" column="full_name" type="string" />
+		<property name="BirthDate" column="birth_date" type="DateTime" />
+		<property name="Phone" column="phone" type="string" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="LibraryAppNHibernate"
+                   namespace="LibraryAppNHibernate">
+	<class name="Copy" table="Copies">
+		<id name="Id" column="copy_id" type="int">
+			<generator class="sequence">
+				<param name="sequence">copies_copy_id_seq</param>
+			</generator>
+		</id>
+		<property name="BookId" column="book_id" type="int" />
+		<property name="InventoryNumber" column="inventory_number" type="string" />
+		<property name="IssueDate" column="issue_date" type="DateTime" />
+		<property name="ReturnDate" column="return_date" type="DateTime" />
+		<property name="ReaderId" column="reader_id" type="int" />
+	</class>
+</hibernate-mapping>

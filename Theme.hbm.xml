@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="LibraryAppNHibernate" namespace="LibraryAppNHibernate">
+	<class name="Theme" table="Themes">
+		<id name="Id" column="theme_code" type="int">
+			<generator class="sequence">
+				<param name="sequence">themes_theme_code_seq</param>
+			</generator>
+		</id>
+		<property name="ThemeName" column="theme_name" type="string" />
+	</class>
+</hibernate-mapping>

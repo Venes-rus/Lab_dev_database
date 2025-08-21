@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Book.hbm.xml" />
+    <None Remove="Copy.hbm.xml" />
+    <None Remove="hibernate.cfg.xml" />
+    <None Remove="Reader.hbm.xml" />
+    <None Remove="Theme.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Book.hbm.xml" />
+    <EmbeddedResource Include="Copy.hbm.xml" />
+    <EmbeddedResource Include="hibernate.cfg.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reader.hbm.xml" />
+    <EmbeddedResource Include="Theme.hbm.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NHibernate" Version="5.5.2" />
+    <PackageReference Include="Npgsql" Version="9.0.2" />
+  </ItemGroup>
+
+</Project>
